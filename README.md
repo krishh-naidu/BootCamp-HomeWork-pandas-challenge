@@ -1244,8 +1244,7 @@ Mathscores_summary = pd.DataFrame({
 ```
 
 <table id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630f" > 
-<thead>
-        <tr> 
+<thead><tr> 
         <th class="blank level0" ></th> 
         <th class="col_heading level0 col0" >school_name</th> 
         <th class="col_heading level0 col1" >9th</th> 
@@ -1253,78 +1252,67 @@ Mathscores_summary = pd.DataFrame({
         <th class="col_heading level0 col3" >11th</th>
         <th class="col_heading level0 col4" >12th</th> 
     </tr></thead> 
-<tbody> 
-    <tr> 
+<tbody> <tr> 
         <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row0" >Bailey High Schoo</th> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >77.083676</td> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >76.996772</td> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >77.515588</td> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >76.492218</td> 
-    </tr>  
-    <tr> 
+    </tr><tr> 
         <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row1" >Cabrera High Schoo</th> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >83.094697</td> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.154506</td> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >82.765560</td> 
         <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >83.277487</td> 
-     </tr>
-     <tr> 
+     </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row2" >Figueroa High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >76.403037</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >76.539974</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >76.884344</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >77.151369</td> 
-      </tr> 
-      <tr> 
+      </tr> <tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row3" >Ford High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >77.361345</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >77.672316</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >76.918058</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >76.179963</td> 
-      </tr>
-      <tr> 
+      </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row4" >Griffin High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >82.044010</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >84.229064</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >83.842105</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >83.356164</td> 
-      </tr>
-      <tr> 
+      </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row5" >Hernandez High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >77.438495</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >77.337408</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >77.136029</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >77.186567</td> 
-       </tr>
-       <tr> 
+       </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row5" >Holden High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >83.787402</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.429825</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >85.000000</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >82.855422</td> 
-       </tr>
-       <tr> 
+       </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row5" >Huang High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >77.027251</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >75.908735</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >76.446602</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >77.225641</td> 
-       </tr>
-       <tr> 
+       </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row5" >Johnson High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >77.187857</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >76.691117</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >77.491653</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >76.863248</td> 
-       </tr>
-  <tr> 
+       </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row5" >Pena High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >83.625455</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.372000</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >84.328125</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >84.121547</td> 
-       </tr>
-       <tr> 
+       </tr><tr> 
           <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row5" >Rodriguez High Schoo</th> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >76.859966</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >76.612500</td> 
@@ -1354,7 +1342,8 @@ Mathscores_summary = pd.DataFrame({
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >84.010288</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >83.836782</td> 
           <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >83.644986</td> 
- </tr></tbody>
+       </tr></tbody>
+ </table> 
 
 ### Reading Scores by Grade
 
