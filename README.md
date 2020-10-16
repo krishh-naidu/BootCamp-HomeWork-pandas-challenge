@@ -1494,7 +1494,7 @@ Avg_Spending.style.format({
 
 <table id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630f" > 
 <thead><tr> 
-        <th class="blank level0" >Spending Ranges (Per Student)</th>  
+        <th class="blank level1" >Spending Ranges (Per Student)</th>  
         <th class="col_heading level0 col0" >Average Math Score	</th> 
         <th class="col_heading level0 col1" >Average Reading Score	</th> 
         <th class="col_heading level0 col2" >% Passing Math</th>
@@ -1536,9 +1536,93 @@ Avg_Spending.style.format({
 
 * Repeat the above breakdown, but this time group schools based on a reasonable approximation of school size (Small, Medium, Large).
 
+```
+bins = [0,999.99,1999.99,9999]
+group_names=['Small (<1000)',"Medium (1000-2000)",'Large (2000-5000)']
+
+School_size = school_summary.loc[:,['Average Math Score','Average Reading Score','% Passing Math','% Passing Reading','% Overall Passing']]
+
+School_size['School Size'] = pd.cut(school_summary['Total Students'],bins,labels=group_names,include_lowest=True) 
+
+School_size = School_size.groupby('School Size').mean()
+
+School_size
+
+```
+
+<table id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630f" > 
+<thead><tr> 
+        <th class="blank level1" >School Size</th>  
+        <th class="col_heading level0 col0" >Average Math Score	</th> 
+        <th class="col_heading level0 col1" >Average Reading Score	</th> 
+        <th class="col_heading level0 col2" >% Passing Math</th>
+        <th class="col_heading level0 col3" >% Passing Reading</th>
+        <th class="col_heading level0 col4" >% Overall Passing</th>
+    </tr></thead> 
+<tbody> <tr> 
+        <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row0" >Small(<1000)</th> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >83.821598</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.929843</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >93.550225</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >96.099437</td>
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >89.883853</td> 
+    </tr><tr> 
+        <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row1" >Medium(1000-2000)</th> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >83.374684</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.864438</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >93.599695</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >96.790680</td>
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >90.621535</td>
+     </tr><tr> 
+          <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row2" >Large(2000-5000)</th> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >77.746417</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >81.344493</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >69.963361</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >82.766634</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >58.286003</td>
+      </tr><tr> 
+</table>
+
+
+
+
 ### Scores by School Type
 
 * Repeat the above breakdown, but this time group schools based on school type (Charter vs. District).
+
+```
+
+School_Type = school_summary.loc[:,['School Type','Average Math Score','Average Reading Score','% Passing Math','% Passing Reading','% Overall Passing']]
+School_Type = School_Type.groupby('School Type').mean()
+School_Type
+
+```
+
+<table id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630f" > 
+<thead><tr> 
+        <th class="blank level1" >School Type</th>  
+        <th class="col_heading level0 col0" >Average Math Score	</th> 
+        <th class="col_heading level0 col1" >Average Reading Score	</th> 
+        <th class="col_heading level0 col2" >% Passing Math</th>
+        <th class="col_heading level0 col3" >% Passing Reading</th>
+        <th class="col_heading level0 col4" >% Overall Passing</th>
+    </tr></thead> 
+<tbody> <tr> 
+        <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row0" >Charter</th> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >83.473852</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.896421</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >93.620830</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >96.586489</td>
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >90.432244</td> 
+    </tr><tr> 
+        <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row1" >District</th> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >76.956733</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >80.966636</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >66.548453</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >80.799062</td>
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >53.672208</td>
+     </tr><tr> 
+</table>
 
 As final considerations:
 
