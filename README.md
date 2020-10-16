@@ -1245,8 +1245,7 @@ Mathscores_summary = pd.DataFrame({
 
 <table id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630f" > 
 <thead><tr> 
-        <th class="blank level0" ></th> 
-        <th class="col_heading level0 col" >school_name</th> 
+        <th class="blank level0" >school_name</th>  
         <th class="col_heading level0 col0" >9th</th> 
         <th class="col_heading level0 col1" >10th</th> 
         <th class="col_heading level0 col2" >11th</th>
