@@ -1473,6 +1473,64 @@ Reading_scores_summary = pd.DataFrame({
   * % Passing Math (The percentage of students that passed math.)
   * % Passing Reading (The percentage of students that passed reading.)
   * % Overall Passing (The percentage of students that passed math **and** reading.)
+  
+```
+bins = [0,583.99,629.99,644.99,674]
+group_names=['<$584',"$585-$629",'$630-$644','$645-$675']
+
+Avg_Spending = school_summary.loc[:,['Average Math Score','Average Reading Score','% Passing Math','% Passing Reading','% Overall Passing']]
+
+Avg_Spending['Spending Ranges (Per Student)'] = pd.cut(school_summary['Per Student Budget'],bins,labels=group_names,include_lowest=True) 
+
+Avg_Spending = Avg_Spending.groupby('Spending Ranges (Per Student)').mean()
+
+Avg_Spending.style.format({
+    'Average Math Score':"{:,.2f}",
+    'Average Reading Score':"{:,.2f}",
+    '% Passing Math':"{:,.2f}",'% Passing Reading':"{:,.2f}",
+    '% Overall Passing':"{:,.2f}"})
+
+```
+
+<table id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630f" > 
+<thead><tr> 
+        <th class="blank level0" >Spending Ranges (Per Student)</th>  
+        <th class="col_heading level0 col0" >Average Math Score	</th> 
+        <th class="col_heading level0 col1" >Average Reading Score	</th> 
+        <th class="col_heading level0 col2" >% Passing Math</th>
+        <th class="col_heading level0 col3" >% Passing Reading</th>
+        <th class="col_heading level0 col4" >% Overall Passing</th>
+    </tr></thead> 
+<tbody> <tr> 
+        <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row0" ><$584</th> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >83.46</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.93</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >93.46</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >96.61</td>
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >90.37</td> 
+    </tr><tr> 
+        <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row1" >585-629</th> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >81.90</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >83.16</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >87.13</td> 
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >92.72</td>
+        <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >81.42</td>
+     </tr><tr> 
+          <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row2" >630-644</th> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >78.52</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >81.62</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >73.48</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >84.39</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >62.86</td>
+      </tr> <tr> 
+          <th id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630flevel0_row0" class="row_heading level0 row3" >645-675</th> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col0" class="data row0 col0" >77.00</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col1" class="data row0 col1" >81.03</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col2" class="data row0 col2" >66.16</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >81.13</td> 
+          <td id="T_8eab2a8a_9c53_11e8_bca9_d49a20d1630frow0_col3" class="data row0 col3" >53.53</td> 
+      </tr><tr> 
+</table>
 
 ### Scores by School Size
 
