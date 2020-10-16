@@ -1476,7 +1476,7 @@ Reading_scores_summary = pd.DataFrame({
   
 ```
 bins = [0,583.99,629.99,644.99,674]
-group_names=['<$584',"$585-629",'$630-644','$645-$75']
+group_names=['<$584',"$585-629",'$630-644','$645-$675']
 
 Avg_Spending = school_summary.loc[:,['Average Math Score','Average Reading Score','% Passing Math','% Passing Reading','% Overall Passing']]
 
